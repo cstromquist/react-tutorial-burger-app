@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Aux from '../../hoc/Aux';
 import classes from './Layout.css';
 import Toolbar from '../Navigation/Toolbar/Toolbar';
@@ -10,11 +10,13 @@ class layout extends Component {
 	}
 
 	sideDrawerClosedHandler = () => {
-		this.setState({showSideDrawer: false});
+		this.setState({ showSideDrawer: false });
 	}
 
 	sideDrawerToggleHandler = () => {
-		this.setState({showSideDrawer: !this.state.showSideDrawer});
+		this.setState((prevState) => {
+			return { showSideDrawer: !prevState.showSideDrawer }; // secure way of setting the state when it depends on the old state
+		});
 	}
 
 	render() {
