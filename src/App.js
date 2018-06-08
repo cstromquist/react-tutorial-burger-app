@@ -3,15 +3,15 @@ import Layout from './hoc/Layout/Layout';
 import BurgerBuilder from './controllers/BurgerBuilder/BurgerBuilder';
 
 class App extends Component {
-  render() {
-    return (
-      <div>
-        <Layout>
+	render() {
+		return (
+			<div>
+				<Layout>
 					<BurgerBuilder />
 				</Layout>
-      </div>
-    );
-  }
+			</div>
+		);
+	}
 }
 
 export default App;
